@@ -1,0 +1,18 @@
+image: registry-testing.kazan.atosworldline.com/kazan/awl-kazan-builder:openjdk8-latest
+
+before_script:
+  - pip install --user plantuml-markdown
+
+pages:
+  script:
+  - export PATH=$PATH:$(pwd)/plantuml
+  - mkdocs build
+  - mv site public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+  tags:
+    - kazan-S
+

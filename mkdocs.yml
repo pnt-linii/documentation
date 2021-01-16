@@ -1,0 +1,75 @@
+# Project information
+site_name: 'Worldline™message alert'
+site_description: 'Technical Documentation for Message Alert'
+site_author: 'DT4'
+
+# Repository
+repo_name: 'sdos-messagealert-docs'
+repo_url: 'https://gitlab.kazan.priv.atos.fr/sdosmessagealert/sdos-messagealert-docs'
+
+# Main navigation
+nav:
+  - Home: index.md
+  - Message Alert (IBO): 
+    - Technical Documentation: technical-documentation.md
+    - Message Service Integration: msgalert-msgservice.md
+    - Data Model: data-model.md
+    - Installation / Setup: dev-setup-ibo.md
+  - Message Alert (Sempris):
+    - Technical Documentation: technical-documentation-sempris.md
+    - Installation / Setup: dev-setup-sempris.md
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: 'https://gitlab.kazan.priv.atos.fr/sdosmessagealert/sdos-messagealert-docs'
+
+# Location for the generated static site files
+site_dir: site
+# Location of Markdown files and other assets
+docs_dir: source
+
+# Configuration
+theme:
+  name: 'material'
+  icon:
+    logo: material/message-alert
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.abbr
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.magiclink:
+      repo_url_shorthand: false
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed
+  - plantuml_markdown
+
